@@ -1,4 +1,4 @@
-# ES6 Warming Up
+# Warming Up
 
 이 글은 Hika Maeng님의 [Code Spitz 75](https://www.facebook.com/groups/codespitz/) 강의 내용을 정리한 글입니다.
 
