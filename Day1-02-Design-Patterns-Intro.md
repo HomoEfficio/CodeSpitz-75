@@ -429,7 +429,7 @@ const JsonData = class extends Data{
 
 빨간색 선으로 표시한 것처럼, 뭔가 내부에 있는 것 같은 `JsonData`가 외부와의 협력에 사용되는 `Info`를 직접 알고 있는 것은 일단 모양새부터 이상하다는 게 보인다. 
 
-`JsonData` 같은 **내부 구현체는 `Info`를 모르게 하고, `Data`만 `Info`를 알도록** 하는 게 좋을 것 같다. 이렇게 하려면 `Info`를 `JsonData`가 아니라 `Data`가 생성하게 하면 된다. 
+`JsonData` 같은 **내부 구현체는 외부 계약인 `Info`를 모르게(즉 `JsonData` 는`Info`에 의존하지 않게) 하고, `Data`만 `Info`를 알도록** 하는 게 좋을 것 같다. 그리고 **`JsonData`는 부모인 `Data`에만 의존**하게 만드는 게 좋을 것 같다. 이렇게 하려면 `Info`를 `JsonData`가 아니라 `Data`가 생성하게 하면 된다. 
 
 ```javascript
 const Data = class {
